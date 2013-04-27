@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scenes>
+    <scene desc="" format="1.0" id="0" name="FirstScene"/>
+    <scene desc="" format="1.0" id="1" name="SecondScene"/>
+    <scene desc="" format="1.0" id="2" name="ThirdScene"/>
+    <scene desc="" format="1.0" id="3" name="FourthScene"/>
+    <scene desc="" format="1.0" id="4" name="FifthScene"/>
+    <scene desc="" format="1.0" id="6" name="EndScene"/>
+</scenes>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pack>
+    <custom-block blocktag="custom-359" blocktype="NORMAL" code="Boolean((~.say(&quot;Walking&quot;, &quot;AtMaxWalkingSpeed&quot;)))" desc="" global="false" gui="%0 At Max Walking Speed" id="359" message="AtMaxWalkingSpeed" name="AtMaxWalkingSpeed" oid="-1" return="BOOLEAN" shared="false" snippetID="178">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-469" blocktype="NORMAL" code="Boolean((~.say(&quot;Animation Manager&quot;, &quot;CategorySameAs&quot;, ~)))" desc="" global="false" gui="Current Category Same As %1" id="469" message="CategorySameAs" name="CategorySameAs" oid="-1" return="BOOLEAN" shared="false" snippetID="169">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="CheckCategory" order="1" type="TEXT"/>
+    </custom-block>
+    <sprite atlasID="0" default="0" desc="" height="22" id="480" name="char" shared="false" width="16">
+        <anim across="1" atlasID="-1" down="1" durations="100" height="22" id="0" loop="true" name="idle" numframes="1" originx="8" originy="11" width="16">
+            <poly data="4,0,0,16,0,16,22,0,22" density="0.1" fric="0.2" gid="-1000" id="0" name="idle" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="219" fixedrot="true" fric="0.0" gid="3" id="479" ignoreg="false" inertia="1.0" ldamp="0.0" lw="false" mass="1.0" name="char" oid="-1" pausable="true" rest="0.1" shared="false" sprite="480" static="false" touchable="true">
+        <snippets>
+            <s enabled="true" id="169">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val=""/>
+                <prop id="3" list="0" val="idle"/>
+                <prop id="4" list="0" val="idle"/>
+                <prop id="5" list="1" val="">
+                    <text order="0" value="Falling"/>
+                    <text order="1" value="Jumping"/>
+                    <text order="2" value="Walking"/>
+                </prop>
+                <prop id="6" list="0" val="false"/>
+                <prop id="7" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="175">
+                <prop id="1" list="0" val="0"/>
+                <prop id="2" list="0" val="10"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="114">
+                <prop id="1" list="0" val="0"/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="3" list="0" val=""/>
+                <prop id="4" list="0" val=""/>
+                <prop id="5" list="0" val="0"/>
+                <prop id="6" list="0" val="Falling"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="202">
+                <prop id="1" list="0" val="3"/>
+                <prop id="2" list="0" val="1"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="163">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="false"/>
+                <prop id="3" list="0" val="jump"/>
+                <prop id="8" list="0" val="0.075"/>
+                <prop id="12" list="0" val=""/>
+                <prop id="13" list="0" val=""/>
+                <prop id="14" list="0" val="false"/>
+                <prop id="15" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="17" list="0" val="0"/>
+                <prop id="16" list="0" val="0"/>
+                <prop id="19" list="0" val="-1"/>
+                <prop id="18" list="0" val="0.75"/>
+                <prop id="21" list="0" val="Jumping"/>
+                <prop id="20" list="0" val="20"/>
+            </s>
+            <s enabled="true" id="178">
+                <prop id="1" list="0" val="right"/>
+                <prop id="2" list="0" val="left"/>
+                <prop id="3" list="0" val="85"/>
+                <prop id="4" list="0" val="20.0"/>
+                <prop id="5" list="0" val="true"/>
+                <prop id="6" list="0" val=""/>
+                <prop id="7" list="0" val=""/>
+                <prop id="8" list="0" val="idle"/>
+                <prop id="9" list="0" val="idle"/>
+                <prop id="10" list="0" val="false"/>
+                <prop id="11" list="1" val=""/>
+                <prop id="12" list="0" val="Walking"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="108">
+                <prop id="1" list="0" val="right"/>
+                <prop id="2" list="0" val="left"/>
+                <prop id="3" list="0" val="0.1"/>
+                <prop id="4" list="0" val="0.50"/>
+                <prop id="5" list="0" val="0.975"/>
+                <prop id="6" list="0" val="0.975"/>
+                <prop id="7" list="0" val="0.9"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="123">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="107">
+                <prop id="1" list="0" val="false"/>
+                <prop id="2" list="0" val="true"/>
+                <prop id="3" list="1" val=""/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <custom-block blocktag="custom-471" blocktype="ACTION" code="~.say(&quot;Animation Manager&quot;, &quot;ClearAnimCat&quot;, ~);" desc="" global="false" gui="Clear Current Anim Category If Same As %1" id="471" message="ClearAnimCat" name="ClearAnimCat" oid="-1" return="VOID" shared="false" snippetID="169">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="ChkCat" order="1" type="TEXT"/>
+    </custom-block>
+    <custom-block blocktag="custom-436" blocktype="ACTION" code="~.say(&quot;Animation Manager&quot;, &quot;ClearCat&quot;);" desc="" global="false" gui="Clear Current Animation for %0" id="436" message="ClearCat" name="ClearCat" oid="-1" return="VOID" shared="false" snippetID="169">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="233" fixedrot="false" fric="0.2" gid="3" id="494" ignoreg="false" inertia="1.0" ldamp="0.0" lw="true" mass="1.0" name="drawManager" oid="-1" pausable="true" rest="0.0" shared="false" sprite="495" static="false" touchable="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" desc="" height="70" id="495" name="drawManager" shared="false" width="64">
+        <anim across="1" atlasID="-1" down="1" durations="100" height="70" id="0" loop="true" name="idlestestest" numframes="1" originx="32" originy="35" width="64">
+            <poly data="4,0,0,64,0,64,70,0,70" density="0.1" fric="0.2" gid="-1000" id="0" name="idlestestest" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <sprite atlasID="0" default="0" desc="" height="70" id="497" name="drawManager2" shared="false" width="64">
+        <anim across="1" atlasID="-1" down="1" durations="100" height="70" id="0" loop="true" name="idlestestester" numframes="1" originx="32" originy="35" width="64">
+            <poly data="4,0,0,64,0,64,70,0,70" density="0.1" fric="0.2" gid="-1000" id="0" name="idlestestester" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="234" fixedrot="false" fric="0.2" gid="3" id="496" ignoreg="false" inertia="1.0" ldamp="0.0" lw="true" mass="1.0" name="drawManager2" oid="-1" pausable="true" rest="0.0" shared="false" sprite="497" static="false" touchable="true">
+        <snippets/>
+    </actor>
+    <custom-block blocktag="custom-437" blocktype="NORMAL" code="String((~.say(&quot;Animation Manager&quot;, &quot;GetCat&quot;)))" desc="" global="false" gui="Current Animation Category for %0" id="437" message="GetCat" name="GetCat" oid="-1" return="TEXT" shared="false" snippetID="169">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-362" blocktype="NORMAL" code="Number((~.say(&quot;Walking&quot;, &quot;GetMaxWalkSpeed&quot;)))" desc="" global="false" gui="Get Max Walk Speed for %0" id="362" message="GetMaxWalkSpeed" name="GetMaxWalkSpeed" oid="-1" return="NUMBER" shared="false" snippetID="178">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-363" blocktype="NORMAL" code="Number((~.say(&quot;Walking&quot;, &quot;GetWalkAccel&quot;)))" desc="" global="false" gui="Get Walk Accel for %0" id="363" message="GetWalkAccel" name="GetWalkAccel" oid="-1" return="NUMBER" shared="false" snippetID="178">
+        <blank name="Self" order="0" type="ACTOR"/>
+    </custom-block>
+    <custom-block blocktag="custom-357" blocktype="ACTION" code="~.say(&quot;Walking&quot;, &quot;LimitSpeed&quot;, ~);" desc="" global="false" gui="Set Limit Speed for %0 to %1" id="357" message="LimitSpeed" name="LimitSpeed" oid="-1" return="VOID" shared="false" snippetID="178">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Limit" order="1" type="BOOLEAN"/>
+    </custom-block>
+    <custom-block blocktag="custom-332" blocktype="ACTION" code="~.say(&quot;Animation Manager&quot;, &quot;LoopAnim&quot;, ~,~);" desc="" global="false" gui="Loop %1 for %0 Using %2" id="332" message="LoopAnim" name="LoopAnim" oid="-1" return="VOID" shared="false" snippetID="169">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Animation" order="1" type="ANIMATION"/>
+        <blank name="Category" order="2" type="TEXT"/>
+    </custom-block>
+    <music desc="" id="498" loop="true" name="MainMusic" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
+    <tileset across="4" atlasID="0" desc="" down="1" id="473" name="MainTileset" oid="-1" shared="false" th="16" tw="16">
+        <tile collision="1" data="" durations="100" frames="0" id="0" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="1" id="1" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="2" id="2" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="3" id="3" order="-1"/>
+    </tileset>
+    <custom-block blocktag="custom-358" blocktype="ACTION" code="~.say(&quot;Walking&quot;, &quot;MaxWalkSpeed&quot;, ~);" desc="" global="false" gui="For %0 Set Max Walk Speed To %1" id="358" message="MaxWalkSpeed" name="MaxWalkSpeed" oid="-1" return="VOID" shared="false" snippetID="178">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="MaxSpeed" order="1" type="NUMBER"/>
+    </custom-block>
+    <custom-block blocktag="custom-333" blocktype="ACTION" code="~.say(&quot;Animation Manager&quot;, &quot;PlayOnce&quot;, ~);" desc="" global="false" gui="Play %1 Once for %0" id="333" message="PlayOnce" name="PlayOnce" oid="-1" return="VOID" shared="false" snippetID="169">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Animation" order="1" type="ANIMATION"/>
+    </custom-block>
+    <custom-block blocktag="custom-211" blocktype="ACTION" code="~.say(&quot;Air Jumping&quot;, &quot;PreventAirJump&quot;, ~);" desc="" global="false" gui="Set Prevent Air Jump for %0 to %1" id="211" message="PreventAirJump" name="PreventAirJump" oid="-1" return="VOID" shared="false" snippetID="-1">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Prevent" order="1" type="BOOLEAN"/>
+    </custom-block>
+    <custom-block blocktag="custom-360" blocktype="ACTION" code="~.say(&quot;Walking&quot;, &quot;PreventWalk&quot;, ~);" desc="" global="false" gui="Set Prevent Walk for %0 to %1" id="360" message="PreventWalk" name="PreventWalk" oid="-1" return="VOID" shared="false" snippetID="178">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Prevent" order="1" type="BOOLEAN"/>
+    </custom-block>
+    <custom-block blocktag="custom-370" blocktype="ACTION" code="~.say(&quot;Wall Jumping&quot;, &quot;PreventWallJump&quot;, ~);" desc="" global="false" gui="Set Prevent Wall Jump for %0 to %1" id="370" message="PreventWallJump" name="PreventWallJump" oid="-1" return="VOID" shared="false" snippetID="-1">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Prevent" order="1" type="BOOLEAN"/>
+    </custom-block>
+    <custom-block blocktag="custom-364" blocktype="ACTION" code="~.say(&quot;Wall Sliding&quot;, &quot;PreventWallSlide&quot;, ~);" desc="" global="false" gui="Set Prevent Wall Slide for %0 to %1" id="364" message="PreventWallSlide" name="PreventWallSlide" oid="-1" return="VOID" shared="false" snippetID="-1">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Prevent" order="1" type="BOOLEAN"/>
+    </custom-block>
+    <sprite atlasID="0" default="0" desc="" height="70" id="482" name="regionManager" shared="false" width="64">
+        <anim across="1" atlasID="-1" down="1" durations="100" height="70" id="0" loop="true" name="invisi" numframes="1" originx="32" originy="35" width="64">
+            <poly data="4,0,0,64,0,64,70,0,70" density="0.1" fric="0.2" gid="-1000" id="0" name="invisi" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="222" fixedrot="false" fric="0.2" gid="3" id="481" ignoreg="false" inertia="1.0" ldamp="0.0" lw="true" mass="1.0" name="regionManager" oid="-1" pausable="true" rest="0.0" shared="false" sprite="482" static="false" touchable="true">
+        <snippets/>
+    </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="223" fixedrot="false" fric="0.2" gid="3" id="483" ignoreg="false" inertia="1.0" ldamp="0.0" lw="true" mass="1.0" name="regionManager2" oid="-1" pausable="true" rest="0.0" shared="false" sprite="484" static="false" touchable="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" desc="" height="70" id="484" name="regionManager2" shared="false" width="64">
+        <anim across="1" atlasID="-1" down="1" durations="100" height="70" id="0" loop="true" name="idler" numframes="1" originx="32" originy="35" width="64">
+            <poly data="4,0,0,64,0,64,70,0,70" density="0.1" fric="0.2" gid="-1000" id="0" name="idler" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <sprite atlasID="0" default="0" desc="" height="70" id="486" name="regionManager3" shared="false" width="64">
+        <anim across="1" atlasID="-1" down="1" durations="100" height="70" id="0" loop="true" name="idlest" numframes="1" originx="32" originy="35" width="64">
+            <poly data="4,0,0,64,0,64,70,0,70" density="0.1" fric="0.2" gid="-1000" id="0" name="idlest" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="225" fixedrot="false" fric="0.2" gid="3" id="485" ignoreg="false" inertia="1.0" ldamp="0.0" lw="true" mass="1.0" name="regionManager3" oid="-1" pausable="true" rest="0.0" shared="false" sprite="486" static="false" touchable="true">
+        <snippets/>
+    </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="227" fixedrot="false" fric="0.2" gid="3" id="487" ignoreg="false" inertia="1.0" ldamp="0.0" lw="true" mass="1.0" name="regionManager4" oid="-1" pausable="true" rest="0.0" shared="false" sprite="488" static="false" touchable="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" desc="" height="70" id="488" name="regionManager4" shared="false" width="64">
+        <anim across="1" atlasID="-1" down="1" durations="100" height="70" id="0" loop="true" name="idlester" numframes="1" originx="32" originy="35" width="64">
+            <poly data="4,0,0,64,0,64,70,0,70" density="0.1" fric="0.2" gid="-1000" id="0" name="idlester" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="229" fixedrot="false" fric="0.2" gid="3" id="490" ignoreg="false" inertia="1.0" ldamp="0.0" lw="true" mass="1.0" name="regionManager5" oid="-1" pausable="true" rest="0.0" shared="false" sprite="491" static="false" touchable="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" desc="" height="70" id="491" name="regionManager5" shared="false" width="64">
+        <anim across="1" atlasID="-1" down="1" durations="100" height="70" id="0" loop="true" name="idlestest" numframes="1" originx="32" originy="35" width="64">
+            <poly data="4,0,0,64,0,64,70,0,70" density="0.1" fric="0.2" gid="-1000" id="0" name="idlestest" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <custom-block blocktag="custom-472" blocktype="ACTION" code="~.say(&quot;Walking&quot;, &quot;SlowToMax&quot;, ~);" desc="" global="false" gui="Slow Down %0 To Max Speed Using Rate %1" id="472" message="SlowToMax" name="SlowToMax" oid="-1" return="VOID" shared="false" snippetID="178">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Rate" order="1" type="NUMBER"/>
+    </custom-block>
+    <custom-block blocktag="custom-361" blocktype="ACTION" code="~.say(&quot;Walking&quot;, &quot;WalkAccel&quot;, ~);" desc="" global="false" gui="For %0 Set Walk Accel to %1" id="361" message="WalkAccel" name="WalkAccel" oid="-1" return="VOID" shared="false" snippetID="178">
+        <blank name="Self" order="0" type="ACTOR"/>
+        <blank name="Accel" order="1" type="NUMBER"/>
+    </custom-block>
+</pack>

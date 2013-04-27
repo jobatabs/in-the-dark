@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="232" extheight="512" extwidth="1312" extx="-16" exty="-16" format="2.1" gravx="-0.0" gravy="70.0" height="480" id="6" name="EndScene" revision="" savecount="0" tiled="1" tileh="16" tilew="16" type="standard" width="1280">
+    <layers>
+        <layer color="100,168,234" id="0" name="Layer 0" order="0"/>
+    </layers>
+    <grad-bg b1="0" b2="0" g1="102" g2="51" r1="255" r2="153"/>
+    <backgrounds/>
+    <foregrounds/>
+    <joints/>
+    <regions/>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="479" name="char 1" sx="1.0" sy="1.0" x="293" y="234" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="496" name="drawManager2 2" sx="1.0" sy="1.0" x="647" y="67" z="0"/>
+    </actors>
+    <snippets/>
+    <terrain>
+        <p pts="26,0.0,320.0,0.0,176.0,176.0,176.0,176.0,144.0,192.0,144.0,192.0,96.0,208.0,96.0,208.0,48.0,224.0,48.0,224.0,16.0,240.0,16.0,240.0,0.0,256.0,0.0,256.0,96.0,352.0,96.0,352.0,128.0,384.0,128.0,384.0,160.0,416.0,160.0,416.0,144.0,432.0,144.0,432.0,160.0,464.0,160.0,464.0,176.0,1280.0,176.0,1280.0,320.0" x="0.0" y="160.0"/>
+    </terrain>
+</scene>

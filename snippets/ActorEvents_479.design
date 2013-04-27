@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-focus-changed comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <pause-unpause comment="false" x="26" y="42">
+                    <int id="0" val="0"/>
+                </pause-unpause>
+            </group>
+            <int id="0" val="0"/>
+        </event-focus-changed>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-focus-changed comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <pause-unpause comment="false" x="26" y="42">
+                    <int id="0" val="1"/>
+                </pause-unpause>
+            </group>
+            <int id="0" val="1"/>
+        </event-focus-changed>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

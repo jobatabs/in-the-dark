@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <create-region comment="false" x="26" y="40">
+                    <int id="0" val="114"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="90"/>
+                    <int id="3" val="40"/>
+                </create-region>
+                <set-val-225-1 comment="false" x="26" y="60">
+                    <REGION eid="lastcreated" id="0"/>
+                </set-val-225-1>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <scene-change-new comment="false" x="26" y="47">
+                    <SCENE eid="3" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0.1"/>
+                    <int id="3" val="0"/>
+                    <int id="4" val="0.1"/>
+                </scene-change-new>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="lastcreated" id="1"/>
+            <ACTORTYPE eid="479" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>
