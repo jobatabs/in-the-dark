@@ -1,6 +1,6 @@
 # Hello
 
-This is an entry for Ludum Dare 26 for the them "Minimal".
+This is an entry for Ludum Dare 26 for the theme "Minimal".
 
 # Story
 
